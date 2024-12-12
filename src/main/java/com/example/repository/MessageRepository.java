@@ -28,5 +28,6 @@ public interface MessageRepository extends JpaRepository<Message, Integer>{
     
     @Query("SELECT m FROM Message m where m.postedBy = :postedBy")
     public List<Message> getAllMessagesByUserId(@Param("postedBy") Integer postedBy);
+    
 
 }
